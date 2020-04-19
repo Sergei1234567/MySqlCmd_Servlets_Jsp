@@ -1,7 +1,7 @@
 package mysqlcmd.controller;
 
-import mysqlcmd.command.Command;
-import mysqlcmd.command.ExitException;
+import mysqlcmd.controller.command.Command;
+import mysqlcmd.controller.command.ExitException;
 import mysqlcmd.view.View;
 
 public class MainController {

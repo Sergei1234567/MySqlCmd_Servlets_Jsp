@@ -17,8 +17,8 @@
         </plugins>
     </build>
 
-    <groupId>com.MySqlCmd_Servlets_Jsp</groupId>
-    <artifactId>MySqlCmd_Servlets_Jsp</artifactId>
+    <groupId>com.MySqlCmd_WEB</groupId>
+    <artifactId>MySqlCmd_WEB</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
@@ -47,7 +47,11 @@
             <version>3.2.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
-
-
 </project>

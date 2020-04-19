@@ -1,4 +1,4 @@
-package mysqlcmd.command;
+package mysqlcmd.controller.command;
 
 import org.junit.Before;
 import org.junit.Rule;

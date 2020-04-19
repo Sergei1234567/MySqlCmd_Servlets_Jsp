@@ -1,4 +1,4 @@
-package mysqlcmd.command;
+package mysqlcmd.controller.command;
 
 import mysqlcmd.model.Table;
 import mysqlcmd.model.manager.DatabaseManager;

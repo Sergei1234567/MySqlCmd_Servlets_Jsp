@@ -1,4 +1,4 @@
-package mysqlcmd.command;
+package mysqlcmd.controller.command;
 
 import org.junit.Test;
 import org.mockito.Mockito;

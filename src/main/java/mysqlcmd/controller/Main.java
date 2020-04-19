@@ -1,6 +1,6 @@
 package mysqlcmd.controller;
 
-import mysqlcmd.command.*;
+import mysqlcmd.controller.command.*;
 import mysqlcmd.model.Table;
 import mysqlcmd.model.manager.DatabaseManager;
 import mysqlcmd.model.manager.MySqlDatabaseManager;

@@ -1,4 +1,4 @@
-package mysqlcmd.command;
+package mysqlcmd.controller.command;
 
 public interface Command {
 
