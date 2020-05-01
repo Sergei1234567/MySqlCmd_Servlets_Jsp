@@ -8,10 +8,10 @@ import java.util.List;
 
 public class Connect implements Command {
 
-    private static String COMMAND_SAMPLE = "connect|sqlcmd|root|root";
+    private static final String COMMAND_SAMPLE = "connect|sqlcmd|root|root";
 
-    private DatabaseManager manager;
-    private View<String> view;
+    private final DatabaseManager manager;
+    private final View<String> view;
 
     public Connect(DatabaseManager manager, View<String> view) {
         this.manager = manager;
@@ -30,8 +30,8 @@ public class Connect implements Command {
         try {
             List<String> data = Arrays.asList(command.split("\\|"));
             if (data.size() != countValidCommandSize()) {
-                throw new IllegalArgumentException(String.format("the wrong number of parameters, wait %s, but there are: %s",
-                        countValidCommandSize(), data.size()));
+                throw new IllegalArgumentException(String.format("the wrong number of parameters, wait %s," +
+                                " but there are: %s", countValidCommandSize(), data.size()));
             }
             String databaseName = data.get(1);
             String userName = data.get(2);
