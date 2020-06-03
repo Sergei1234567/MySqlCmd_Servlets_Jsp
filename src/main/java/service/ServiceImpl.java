@@ -1,5 +1,6 @@
 package service;
 
+import mysqlcmd.model.Table;
 import mysqlcmd.model.manager.DatabaseManager;
 import mysqlcmd.model.manager.MySqlDatabaseManager;
 
@@ -11,20 +12,22 @@ import java.util.List;
  */
 public class ServiceImpl implements Service {
 
-    private DatabaseManager manager;
-
-    public ServiceImpl() {
-        manager = new MySqlDatabaseManager();
-    }
-
     @Override
     public List<String> commandsList() {
-        return Arrays.asList("help", "menu", "connect");
+        return Arrays.asList("help", "menu", "connect", "find");
     }
 
     @Override
-    public void connect(String databaseName, String userName, String password) {
+    public DatabaseManager connect(String databaseName, String userName, String password) {
+        DatabaseManager manager = new MySqlDatabaseManager();
         manager.connect(databaseName, userName, password);
+        return manager;
+    }
+
+    @Override
+    public Table find(DatabaseManager manager, String tableName) {
+        Table table = manager.getTable(tableName);
+        return table;
     }
 
 }

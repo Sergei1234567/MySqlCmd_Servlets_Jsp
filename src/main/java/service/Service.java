@@ -1,5 +1,8 @@
 package service;
 
+import mysqlcmd.model.Table;
+import mysqlcmd.model.manager.DatabaseManager;
+
 import java.util.List;
 
 /**
@@ -9,5 +12,7 @@ public interface Service {
 
     List<String> commandsList();
 
-    void connect(String databaseName, String userName, String password);
+    DatabaseManager connect(String databaseName, String userName, String password);
+
+    Table find(DatabaseManager manager, String tableName);
 }
