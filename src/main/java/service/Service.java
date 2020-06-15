@@ -1,9 +1,9 @@
 package service;
 
-import mysqlcmd.model.Table;
 import mysqlcmd.model.manager.DatabaseManager;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by oleksandr.baglai on 30.10.2015.
@@ -14,5 +14,5 @@ public interface Service {
 
     DatabaseManager connect(String databaseName, String userName, String password);
 
-    Table find(DatabaseManager manager, String tableName);
+    Set<String> findTableName(DatabaseManager manager);
 }

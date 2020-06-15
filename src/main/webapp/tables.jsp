@@ -5,17 +5,9 @@
     <title>SQLCmd</title>
 </head>
 <body>
-<table>
-    <c:forEach items="${table}" var="row">
-        <tr>
-            <c:forEach items="${row}" var="element">
-                <td>
-                        ${element}
-                </td>
-            </c:forEach>
-        </tr>
+    <c:forEach items="${tables}" var="table">
+        ${table}
     </c:forEach>
-</table>
 <a href="menu">menu</a><br>
 </body>
 </html>
